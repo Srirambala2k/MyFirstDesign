@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Require>
+@{
+    ViewData["Title"] = "Index";
+}
+<div>
+    <table id="RequsestId" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <td> Student Name </td>
+                <td> Request Id </td>
+                <td> Subject</td>
+                <td> Created On </td>
+                <td> Created By</td>
+                <td> Due Date </td>
+                <td> Status </td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var requires in Model)
+            {
+                <tr>
+                    <td>@requires.StudentName </td>
+                    <td> @requires.RequestId </td>
+                    <td> @requires.Subject</td>
+                    <td> @requires.CreatedOn </td>
+                    <td> @requires.CreatedBy </td>
+                    <td> @requires.DueDate </td>
+                    <td>@requires.Status</td>
+                    <td> @requires.Action</td>
+                </tr>
+
+            }
+            
+        <tbody>
+    </table>
+</div>
